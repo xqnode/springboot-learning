@@ -9,6 +9,7 @@
         <module>service-websocket</module>
         <module>service-mybatis</module>
         <module>service-email</module>
+        <module>service-redis</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
