@@ -1,8 +1,9 @@
-package com.xqnode.mongodb.entity;
+package com.xqnode.elasticsearch.entity;
 
 import lombok.Builder;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.elasticsearch.annotations.Document;
 
 import java.io.Serializable;
 
@@ -12,6 +13,7 @@ import java.io.Serializable;
  */
 @Data
 @Builder
+@Document(indexName = "mall")
 public class User implements Serializable {
 
     @Id

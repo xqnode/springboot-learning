@@ -11,6 +11,7 @@
         <module>service-email</module>
         <module>service-redis</module>
         <module>service-mongodb</module>
+        <module>service-elasticsearch</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

@@ -2,12 +2,15 @@ package com.xqnode.redis;
 
 
 import com.xqnode.redis.service.RedisService;
+import org.assertj.core.util.Maps;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 
@@ -32,8 +35,11 @@ public class RedisTest {
         redisService.lLeftPush("list:wx", "Java学习指南");
         System.out.println(redisService.lRange("list:wx", 0 , -1));
 
-        redisService.hPut("hash", "name:wx", "Java学习指南");
-        System.out.println(redisService.hGet("hash", "name:wx"));
+        Map<String, String> map = new HashMap<>();
+        map.put("name", "tom");
+        map.put("address", "合肥");
+        redisService.hPutAll("hash", map);
+        System.out.println(redisService.hGetAll("hash"));
 
     }
 }

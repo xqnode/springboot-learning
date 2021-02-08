@@ -22,7 +22,7 @@ public class MongodbTest {
     @Test
     public void test() {
         userRepository.deleteAll();
-        User user = User.builder().username("xqnode").nickname("Java学习指南").password("123456").build();
+        User user = User.builder().id(1L).username("xqnode").nickname("Java学习指南").password("123456").build();
         userRepository.insert(user);
         List<User> all = userRepository.findAll();
         log.info("查询所有对象：{}", all);

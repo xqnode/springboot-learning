@@ -1,0 +1,9 @@
+spring:
+  elasticsearch:
+    rest:
+      uris: 127.0.0.1:9200
+
+#     这两个属性在新版本的springboot中已经不建议使用，9300属于elasticsearch各节点之间的通讯接口。
+#     属于lowlevelclient。我们推荐使用9200的RestHighLevelClient去链接
+#     cluster-nodes: 127.0.0.1:9300
+#     cluster-name: helloElasticsearch
